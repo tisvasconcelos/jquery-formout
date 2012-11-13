@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery formOut</title>
+</head>
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+		</ul>
+	</nav>
+	
+	<form action="#" method="post">
+		<input name="name" />
+		<input type="password" name="password" />
+		<input type="file" name="file" />
+		<input type="radio" name="accept" value="true" />
+		<input type="checkbox" checked="checked" name="notification" value="true" />
+		<textarea name="message"></textarea>
+		<select name="type">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+		</select>
+		<a href="#">Link in form</a>
+	</form>
+
+	<a href="#">Link out of nav</a>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="jquery.formout.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('form').formOut({
+			'area': 'a:not(form a)'
+		});
+	});
+	</script>
+
+</body>
+</html>
